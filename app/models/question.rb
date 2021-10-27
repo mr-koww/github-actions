@@ -1,3 +1,3 @@
 class Question < ApplicationRecord
-  validates :title, :description, presence: true
+  validates :title, presence: true
 end
