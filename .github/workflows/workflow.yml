@@ -35,5 +35,8 @@ jobs:
         run: |
           bundler exec rails db:create RAILS_ENV=test
           bundler exec rails db:migrate RAILS_ENV=test
+        env:
+          POSTGRES_HOST: postgres
+          POSTGRES_PORT: 5432
       - name: Run tests
         run: bundler exec rake
